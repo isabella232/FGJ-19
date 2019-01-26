@@ -9,6 +9,11 @@ public class StateEngine : MonoBehaviour
         get { return transform.Find("StartState").gameObject; }
     }
 
+    public GameObject IntroState
+    {
+        get { return transform.Find("IntroState").gameObject; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
