@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5846841392113285379}
   m_Layer: 0
   m_Name: Customer
-  m_TagString: Untagged
+  m_TagString: Ungrabable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +128,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 0
 --- !u!1 &5846841392514048468
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,3 +204,5 @@ MonoBehaviour:
   fruitImage: {fileID: 3671871057999019637, guid: 9bd508f1a2e8b08459fac7e3ea3d5e47,
     type: 3}
   offSet: 10
+  customerRange: 10
+  color: {r: 0, g: 0, b: 0, a: 0}

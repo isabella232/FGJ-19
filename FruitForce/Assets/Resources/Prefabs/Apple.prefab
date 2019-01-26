@@ -84,7 +84,6 @@ GameObject:
   - component: {fileID: 5240132730469466805}
   - component: {fileID: 5240132730469466804}
   - component: {fileID: 5240132730469466803}
-  - component: {fileID: 5240132730469466802}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Untagged
@@ -202,14 +201,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.29953247, y: 0.2907606}
   m_EdgeRadius: 0
---- !u!247 &5240132730469466802
-ConstantForce2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5240132730469466801}
-  m_Enabled: 1
-  m_Force: {x: 0, y: -1}
-  m_RelativeForce: {x: 0, y: 0}
-  m_Torque: 0
