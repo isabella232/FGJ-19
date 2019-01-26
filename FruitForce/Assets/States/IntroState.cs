@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainState : StateMachineBehaviour
-{
-    public bool button = false;
+public class IntroState : StateMachineBehaviour {
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo info, int layerIndex)
     {
@@ -18,6 +16,6 @@ public class MainState : StateMachineBehaviour
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo info, int layerIndex)
     {
-        
+        Debug.Log("jaah");
     }
 }
