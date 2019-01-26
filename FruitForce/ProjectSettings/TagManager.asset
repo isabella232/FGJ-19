@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Customer
+  - Canvas
+  - CustomerManager
+  - Blender
+  - Fruit
+  - Juice
   layers:
   - Default
   - TransparentFX
