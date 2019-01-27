@@ -48,7 +48,7 @@ public class CustomerLogic : MonoBehaviour
                 transform.parent.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 transform.parent.GetComponent<Rigidbody2D>().rotation = 0;
                 fruitUI.transform.position = Camera.main.WorldToScreenPoint(transform.position);
-                fruitUI.transform.position = new Vector3(fruitUI.transform.position.x + 50, fruitUI.transform.position.y, 0);
+                fruitUI.transform.position = new Vector3(fruitUI.transform.position.x + 150, fruitUI.transform.position.y+85, 0);
 
             }
         }
@@ -83,7 +83,7 @@ public class CustomerLogic : MonoBehaviour
         }
         fruitUI = Instantiate(fruitUI, GameObject.FindGameObjectWithTag("Canvas").transform);
         fruitUI.transform.position = Camera.main.WorldToScreenPoint(transform.position);
-        fruitUI.transform.position = new Vector3(fruitUI.transform.position.x + sideX*20, fruitUI.transform.position.y, 0);
+        fruitUI.transform.position = new Vector3(fruitUI.transform.position.x + sideX*150, fruitUI.transform.position.y+85, 0);
         int howMany = Random.Range(1, 4);
         Color color1 = new Color();
         for(int i = 0; i < howMany; i++)
@@ -102,7 +102,7 @@ public class CustomerLogic : MonoBehaviour
         }
         GameObject obj = Instantiate(fruitImage, fruitUI.transform);
         obj.transform.localPosition = new Vector3(0, 0, 0);
-        obj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/juice");
+        obj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/mehu");
         obj.GetComponent<Image>().color = color1;
         color = color1;
     }
@@ -160,7 +160,7 @@ public class CustomerLogic : MonoBehaviour
             }
 
             text.transform.position = Camera.main.WorldToScreenPoint(transform.position);
-            text.transform.position = new Vector2(text.transform.position.x + sideX*80, text.transform.position.y );
+            text.transform.position = new Vector2(text.transform.position.x + sideX*150, text.transform.position.y +50);
             text.GetComponent<Text>().text = "I'm " + ((int)(100f - 2*difference * 100f)) + "% Happy";
             GameObject.FindGameObjectWithTag("CustomerManager").GetComponent<CustomerManager>().SpawnCustomer();
             GameObject.FindGameObjectWithTag("CustomerManager").GetComponent<CustomerManager>().AddMoney((int)(100f - 2 * difference * 100f));
