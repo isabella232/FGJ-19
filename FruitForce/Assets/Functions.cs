@@ -18,14 +18,14 @@ public class Functions : MonoBehaviour
 
     public Color CombineColors(Color c1, Color c2)
     {
+        Debug.Log("COMBINE COLORS "+c1 + " " +c2);
         float h1, s1, v1;
         Color.RGBToHSV(c1, out h1, out s1, out v1);
 
         float h2, s2, v2;
         Color.RGBToHSV(c2, out h2, out s2, out v2);
 
-        Debug.Log("color " + h1 + " " + s1 + " " + v1);
-        Debug.Log("color " + h2 + " " + s2 + " " + v2);
+        
         float difference = Mathf.Abs(h1 - h2);
 
         bool upside = false;

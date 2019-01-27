@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum Fruit
 {
@@ -14,7 +15,13 @@ public class CustomerManager : MonoBehaviour
     public GameObject customerPrefab;
     public Vector2 areaSize;
     public int distanceFromEdge;
-    
+    public int money = 100;
+    public int customersServed = 0;
+    public int customerFrequency = 60;
+    public int maxCustomers = 100;
+    private int counter = 0;
+    private float customerSpeed = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +29,20 @@ public class CustomerManager : MonoBehaviour
         Debug.Log("Resolution " + areaSize);
         distanceFromEdge = -50;
         SpawnCustomer();
+        GameObject.FindGameObjectWithTag("Score").GetComponent<Text>().text = "Money: " + money.ToString();
+        GameObject.FindGameObjectWithTag("Customers").GetComponent<Text>().text = "Customers Served: " + customersServed.ToString();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        counter++;
+        if(counter > customerFrequency && GameObject.FindGameObjectsWithTag("Customer").Length < maxCustomers)
+        {
+            SpawnCustomer();
+            counter = 0;
+        }
     }
 
     public Vector3 RandomSpawnPos(bool customer)
@@ -117,6 +132,23 @@ public class CustomerManager : MonoBehaviour
 
         }
         */
-        customer.GetComponent<Rigidbody2D>().AddForce(dir.normalized * 80f);
+        //customer.GetComponent<Rigidbody2D>().AddForce(dir.normalized * 80f);
+        customer.GetComponent<ConstantForce2D>().force = dir.normalized*customerSpeed;
+    }
+
+    public void AddMoney(int amount)
+    {
+        money += amount;
+        GameObject.FindGameObjectWithTag("Score").GetComponent<Text>().text = "Score: " + money.ToString();
+        if(money<0)
+        {
+           //YOUU LOOOSE
+        }
+    }
+    public void CustomerServed()
+    {
+        customersServed++;
+        GameObject.FindGameObjectWithTag("Customers").GetComponent<Text>().text = "Customers Served: " + customersServed.ToString();
+
     }
 }

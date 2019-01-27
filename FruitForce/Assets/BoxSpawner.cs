@@ -18,7 +18,7 @@ public class BoxSpawner : MonoBehaviour
     {
         //if (GameObject.FindGameObjectsWithTag("Fruit").Length < 5)
         counter++;
-      if(counter > interval)
+      if(counter > interval && GameObject.FindGameObjectsWithTag("Box").Length < 3)
         {
             SpawnBox();
             counter = 0;

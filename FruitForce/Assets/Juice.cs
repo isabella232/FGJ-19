@@ -29,13 +29,15 @@ public class Juice : MonoBehaviour
         if(collision.gameObject.tag == "Juice")
         {
             
-            GetComponentInParent<SpriteRenderer>().color = Camera.main.GetComponent<Functions>().CombineColors(color, collision.gameObject.GetComponent<Juice>().color);
+            Color blendColor = Camera.main.GetComponent<Functions>().CombineColors(color, collision.gameObject.GetComponent<Juice>().color);
+            GetComponentInParent<SpriteRenderer>().color = blendColor;
+            color = blendColor;
             /*
             color.g = Mathf.Sqrt((Mathf.Pow(color.g, 2) + Mathf.Pow(fruitsInside[i].GetComponent<FruitLogic>().color.g, 2))/2);
             color.b = Mathf.Sqrt((Mathf.Pow(color.b, 2) + Mathf.Pow(fruitsInside[i].GetComponent<FruitLogic>().color.b, 2))/2);
             color.a = Mathf.Sqrt((Mathf.Pow(color.a, 2) + Mathf.Pow(fruitsInside[i].GetComponent<FruitLogic>().color.a, 2))/2);
             */
-            
+
             if (marked)
             {
                 Destroy(gameObject.transform.parent.gameObject);

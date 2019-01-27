@@ -199,5 +199,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c3c1a01d4267b4b89144fd4e98d1d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0.011764695, g: 0.034251552, b: 0.5176471, a: 1}
+  color: {r: 1, g: 0.739583, b: 0, a: 1}
   fruitType: 1

@@ -12,6 +12,8 @@ TagManager:
   - Juice
   - Box
   - Ungrabable
+  - Score
+  - Customers
   layers:
   - Default
   - TransparentFX
