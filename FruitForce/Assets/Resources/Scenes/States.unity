@@ -411,31 +411,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 583306108984050996, guid: 918f00c634dda6f4cb1633cf28aa5a42,
-        type: 3}
-      propertyPath: m_Name
-      value: 'CustomerManager '
-      objectReference: {fileID: 0}
-    - target: {fileID: 583306109292819157, guid: 918f00c634dda6f4cb1633cf28aa5a42,
-        type: 3}
-      propertyPath: m_Name
-      value: BoxSpawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 583306108341734642, guid: 918f00c634dda6f4cb1633cf28aa5a42,
-        type: 3}
-      propertyPath: m_Name
-      value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 741553708783771972, guid: 918f00c634dda6f4cb1633cf28aa5a42,
-        type: 3}
-      propertyPath: m_Name
-      value: Blender
-      objectReference: {fileID: 0}
-    - target: {fileID: 583306109348943544, guid: 918f00c634dda6f4cb1633cf28aa5a42,
-        type: 3}
-      propertyPath: m_Name
-      value: 'BlenderSpawner '
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 918f00c634dda6f4cb1633cf28aa5a42, type: 3}
 --- !u!1001 &5903695826307130996

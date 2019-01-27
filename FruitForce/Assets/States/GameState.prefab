@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 583306108341734641}
   - component: {fileID: 583306108341734640}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: Canvas
   m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 583306108984050997}
   - component: {fileID: 583306108984050994}
   m_Layer: 0
-  m_Name: CustomerManager (1)
+  m_Name: 'CustomerManager '
   m_TagString: CustomerManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 583306109292819154}
   - component: {fileID: 583306109292819155}
   m_Layer: 0
-  m_Name: BoxSpawner (1)
+  m_Name: BoxSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 583306109348943545}
   - component: {fileID: 583306109348943430}
   m_Layer: 0
-  m_Name: BlenderSpawner (1)
+  m_Name: 'BlenderSpawner '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -409,6 +409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 583306109378041970}
+  - component: {fileID: 580038581}
   m_Layer: 0
   m_Name: GameState
   m_TagString: Untagged
@@ -423,7 +424,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583306109378041973}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 474, y: 304.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -435,6 +436,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &580038581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583306109378041973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418bcf97b718ec84db6e2a67580832f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 9097564733274809625, guid: 0060f20b8f5cbc8488732cacdd0ace01, type: 3}
 --- !u!1001 &583306108492369402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -445,7 +459,7 @@ PrefabInstance:
     - target: {fileID: 167432513481796798, guid: 1fb869b610f3bc5448cf3996f9200335,
         type: 3}
       propertyPath: m_Name
-      value: Blender (1)
+      value: Blender
       objectReference: {fileID: 0}
     - target: {fileID: 167432513481796738, guid: 1fb869b610f3bc5448cf3996f9200335,
         type: 3}
