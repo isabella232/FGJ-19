@@ -12,6 +12,19 @@ public class PlayerFactory : MonoBehaviour
     void Start()
     {
         c = new bool[4];
+
+        CreatePlayer(transform.parent.GetChild(1).GetComponent<StartMenu>().controller);
+    }
+
+    void CreatePlayer(int i)
+    {
+        c[i - 1] = true;
+        numPlayer++;
+        GameObject newPlayer = Instantiate(player);
+        newPlayer.GetComponent<PlayerController>().playerController = "c" + i + "_";
+        newPlayer.GetComponent<PlayerController>().playerNum = numPlayer;
+
+        newPlayer.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Doggy" + numPlayer);
     }
 
     // Update is called once per frame
@@ -24,13 +37,7 @@ public class PlayerFactory : MonoBehaviour
                 if (Input.GetButtonDown("c" + i + "_button_x"))
                     if (c[i-1] == false)
                     {
-                        c[i - 1] = true;
-                        numPlayer++;
-                        GameObject newPlayer = Instantiate(player);
-                        newPlayer.GetComponent<PlayerController>().playerController = "c" + i + "_";
-                        newPlayer.GetComponent<PlayerController>().playerNum = numPlayer;
-
-                        newPlayer.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Doggy" + numPlayer);
+                        CreatePlayer(i);
                     }
             }
         }
