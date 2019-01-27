@@ -22,6 +22,7 @@ public class CustomerManager : MonoBehaviour
     public int customersServed = 0;
     public int customerFrequency = 60;
     public int maxCustomers = 100;
+    public GameObject endText;
     private int counter = 0;
     private float customerSpeed = 5f;
 
@@ -149,7 +150,7 @@ public class CustomerManager : MonoBehaviour
         GameObject.FindGameObjectWithTag("Score").GetComponent<Text>().text = "Score: " + money.ToString();
         if(money<0)
         {
-           //YOUU LOOOSE
+            Instantiate(endText, GameObject.FindGameObjectWithTag("Canvas").transform);
         }
     }
     public void CustomerServed()
