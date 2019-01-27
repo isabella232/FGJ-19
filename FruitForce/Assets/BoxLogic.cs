@@ -16,7 +16,7 @@ public class BoxLogic : MonoBehaviour
         
         fruits = new List<Fruit>();
         int amount = Random.Range(2, maxAmount);
-        boxPrice = pricePerFruit * amount;
+        boxPrice = pricePerFruit * amount + (int)(GameObject.FindGameObjectWithTag("CustomerManager").GetComponent<CustomerManager>().customersServed*0.25f);
         for(int i = 0; i < amount; i++)
         {
             int whichFruit = Random.Range(0, System.Enum.GetValues(typeof(Fruit)).Length);

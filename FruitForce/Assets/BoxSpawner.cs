@@ -27,6 +27,7 @@ public class BoxSpawner : MonoBehaviour
     public void SpawnBox()
     {
         GameObject box = Instantiate(boxPrefab, GameObject.FindGameObjectWithTag("CustomerManager").GetComponent<CustomerManager>().RandomSpawnPos(false),Quaternion.identity);
+        box.transform.parent = GameObject.FindGameObjectWithTag("GameState").transform;
         Vector2 dir = transform.position - box.transform.position;
         box.transform.position = new Vector3(box.transform.position.x, box.transform.position.y, 0);
         Debug.Log("OFKFO " + box.transform.position);
