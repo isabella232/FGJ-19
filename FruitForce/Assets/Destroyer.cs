@@ -18,6 +18,10 @@ public class Destroyer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(collision.collider.gameObject);
+        if(collision.gameObject.name.Substring(0,6)!="Player")
+        {
+            Destroy(collision.collider.gameObject);
+        }
+        
     }
 }

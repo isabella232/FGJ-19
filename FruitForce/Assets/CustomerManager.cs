@@ -31,7 +31,7 @@ public class CustomerManager : MonoBehaviour
         areaSize = new Vector2(Camera.main.pixelWidth, Camera.main.pixelHeight);
         Debug.Log("Resolution " + areaSize);
         distanceFromEdge = -50;
-        counter = customerFrequency;
+        counter = 0;
         SpawnCustomer();
         GameObject.FindGameObjectWithTag("Score").GetComponent<Text>().text = "Money: " + money.ToString();
         GameObject.FindGameObjectWithTag("Customers").GetComponent<Text>().text = "Customers Served: " + customersServed.ToString();
