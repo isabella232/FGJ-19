@@ -5,9 +5,13 @@ using UnityEngine.UI;
 
 public enum Fruit
 {
-    Banana,
-    Apple,
-    Orange
+    Orange,
+    Red,
+    Green,
+    Blue,
+    Yellow,
+    Purple
+
 }
 
 public class CustomerManager : MonoBehaviour
