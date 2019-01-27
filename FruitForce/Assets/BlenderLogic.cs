@@ -10,29 +10,46 @@ public class BlenderLogic : MonoBehaviour
     public int maxCount = 1;
 
     public bool isOpen = true;
+
+    public bool blending = false;
+    float blendTime = 0f;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
+
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if (blending)
         {
-            Blend();
+            gameObject.transform.parent.transform.eulerAngles += new Vector3(0, 0, (Random.value - 0.5f) * 30);
+
+            blendTime += Time.deltaTime;
+        }
+        if (blendTime >= 3f)
+        {
+            endBlend();
+            blendTime = 0f;
         }
     }
 
-    public void Blend()
+    void endBlend()
     {
-        if(fruitsInside.Count != 0)
+        if (fruitsInside.Count != 0)
         {
-            GameObject juice = Instantiate(juicePrefab, transform.position, Quaternion.identity);
+            Vector3 newPos = transform.TransformPoint(new Vector3(0, 0.3f));
+            GameObject juice = Instantiate(juicePrefab, newPos, Quaternion.identity);
             Color color = fruitsInside[0].GetComponent<FruitLogic>().color;
+
             juice.GetComponent<SpriteRenderer>().color = color;
             juice.GetComponentInChildren<Juice>().color = color;
+            Vector2 dir = new Vector2((Random.value - 0.5f)*0.5f, 1).normalized;
+            dir = transform.TransformDirection(dir);
+            juice.GetComponent<Rigidbody2D>().velocity = dir*3f;
+            transform.parent.GetComponent<Rigidbody2D>().velocity = -dir;
             fruitsInside.Clear();
 
             /*
@@ -41,9 +58,14 @@ public class BlenderLogic : MonoBehaviour
             juiceColor.g = color.y / fruitAmount;
             juiceColor.b = color.z / fruitAmount;
             */
-            
+
         }
-        
+        blending = false;
+    }
+
+    public void Blend()
+    {
+        blending = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

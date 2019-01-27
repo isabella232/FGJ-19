@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     float vInput2 = 0f;
     public float maxVelocity = 4.0f;
     bool haveGrabbed = false;
+    float throwing = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +44,18 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown(playerController + "button_x"))
         {
-
+            CircleCollider2D[] results = new CircleCollider2D[10];
+            int num = transform.GetChild(0).GetComponent<CircleCollider2D>().OverlapCollider(new ContactFilter2D(), results);
+            for (int i = 0; i < num; i++)
+            {
+                if (results[i].transform.childCount > 0)
+                {
+                    if (results[i].transform.GetChild(0).tag == "Blender")
+                    {
+                        results[i].transform.GetChild(0).GetComponent<BlenderLogic>().Blend();
+                    }
+                }
+            }
         }
 
         if (Input.GetButtonDown(playerController + "button_o"))
@@ -57,13 +69,14 @@ public class PlayerController : MonoBehaviour
             {
                 CircleCollider2D[] results = new CircleCollider2D[3];
                 int num = transform.GetChild(0).GetComponent<CircleCollider2D>().OverlapCollider(new ContactFilter2D(), results);
-                if (num > 0)
+                for (int i = 0; i < num; i++)
                 {
-                    results[0].transform.SetParent(transform.GetChild(0));
-                    results[0].transform.localPosition = Vector3.zero;
-                    results[0].transform.rotation = new Quaternion();
-                    results[0].GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                    results[0].GetComponent<Rigidbody2D>().isKinematic = true;
+                    if (results[i].tag == "Ungrabable")
+                        continue;
+                    results[i].transform.SetParent(transform.GetChild(0));
+                    results[i].transform.localPosition = Vector3.zero;
+                    results[i].GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                    results[i].GetComponent<Rigidbody2D>().isKinematic = true;
                     haveGrabbed = true;
                 }
 

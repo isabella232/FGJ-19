@@ -10,6 +10,7 @@ TagManager:
   - Blender
   - Fruit
   - Juice
+  - Ungrabable
   layers:
   - Default
   - TransparentFX
