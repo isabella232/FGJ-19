@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
                 Vector2 velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
                 trans.GetComponent<Rigidbody2D>().isKinematic = false;
                 trans.GetComponent<Collider2D>().enabled = true;
-                trans.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity + velocity * throwVelocityMult * 3f;
+                trans.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity + velocity * throwVelocityMult * throwing;
                 throwing = 0;
             }
         }
