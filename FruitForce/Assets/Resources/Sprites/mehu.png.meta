@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 2953f426ba2886840a99b6d4b119dc8a
+guid: 22c5b8bc5c989464880ecb6c5651d544
 TextureImporter:
   fileIDToRecycleName:
-    21300000: juice_0
-    21300002: juice_1
-    21300004: juice_2
-    21300006: juice_3
-    21300008: juice_4
+    21300000: mehu_0
+    21300002: mehu_1
+    21300004: mehu_2
+    21300006: mehu_3
+    21300008: mehu_4
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -50,7 +50,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -89,7 +89,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: juice_0
+      name: mehu_0
       rect:
         serializedVersion: 2
         x: 1
@@ -97,19 +97,19 @@ TextureImporter:
         width: 87
         height: 91
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8b12227dfa73ac47a695c9b1a80f106
+      spriteID: b394b33940650444b8de69150a082803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: juice_1
+      name: mehu_1
       rect:
         serializedVersion: 2
         x: 115
@@ -117,19 +117,19 @@ TextureImporter:
         width: 83
         height: 98
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d58a222b5b52a1949adfe3a4fbbb8a7c
+      spriteID: aa0674da30e5cf14c9032353596c4a8b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: juice_2
+      name: mehu_2
       rect:
         serializedVersion: 2
         x: 221
@@ -137,19 +137,19 @@ TextureImporter:
         width: 87
         height: 93
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e1ca19f60919604f9f79bd13b926cbe
+      spriteID: 6ebb6cf7be9f61045a48ac44fe0c7c87
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: juice_3
+      name: mehu_3
       rect:
         serializedVersion: 2
         x: 328
@@ -157,19 +157,19 @@ TextureImporter:
         width: 95
         height: 90
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db028d601903b1f4185741af4e8e6c3c
+      spriteID: 1b2ca32bf74505d4c8d0a945f91b940a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: juice_4
+      name: mehu_4
       rect:
         serializedVersion: 2
         x: 442
@@ -177,13 +177,13 @@ TextureImporter:
         width: 88
         height: 90
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bd5a93a762af0049be9ca44c4233716
+      spriteID: d28a159e41bec954d9434ff6759cdc28
       vertices: []
       indices: 
       edges: []
@@ -191,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1a719eb7e15317b43a4d0751f3adc1e4
+    spriteID: dc48e2db31c06804f81fd49ba3906737
     vertices: []
     indices: 
     edges: []
