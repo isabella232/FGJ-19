@@ -44,6 +44,7 @@ public class BoxLogic : MonoBehaviour
             float forceX = Random.Range(-maxForce, maxForce);
             float forceY = Random.Range(-maxForce, maxForce);
             obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(forceX, forceY));
+            obj.transform.parent = GameObject.FindGameObjectWithTag("GameState").transform;
         }
         GameObject.FindGameObjectWithTag("CustomerManager").GetComponent<CustomerManager>().AddMoney(-boxPrice);
         Destroy(transform.parent.gameObject);
