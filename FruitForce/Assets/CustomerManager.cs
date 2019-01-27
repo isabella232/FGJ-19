@@ -138,6 +138,8 @@ public class CustomerManager : MonoBehaviour
         */
         //customer.GetComponent<Rigidbody2D>().AddForce(dir.normalized * 80f);
         customer.GetComponent<ConstantForce2D>().force = dir.normalized*customerSpeed;
+        int spriteNum = Random.Range(1, 5);
+        customer.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/doggy" + spriteNum);
     }
 
     public void AddMoney(int amount)
