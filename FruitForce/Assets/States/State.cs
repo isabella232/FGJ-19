@@ -31,6 +31,5 @@ public static class GameStateExtensions
         }
         return obj;
     }
-
 }
 
