@@ -103,6 +103,7 @@ public class CustomerManager : MonoBehaviour
         Vector2 spawnPos = RandomSpawnPos(true);
         Debug.Log("SSPAWNWN "+spawnPos);
         GameObject customer = Instantiate(customerPrefab, spawnPos, Quaternion.identity);
+        customer.transform.parent = GameObject.FindGameObjectWithTag("GameState").transform;
         int x = 0;
         int y = 0;
         if(spawnPos.x == (0 + distanceFromEdge))

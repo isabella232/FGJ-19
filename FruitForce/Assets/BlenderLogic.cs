@@ -61,14 +61,14 @@ public class BlenderLogic : MonoBehaviour
 
         }
 
-        GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Blender0");
+        transform.parent.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Blender1");
         blending = false;
     }
 
     public void Blend()
     {
         blending = true;
-        GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Blender1");
+        transform.parent.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Blender0");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
