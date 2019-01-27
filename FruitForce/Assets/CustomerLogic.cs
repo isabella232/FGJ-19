@@ -11,24 +11,57 @@ public class CustomerLogic : MonoBehaviour
     public GameObject fruitUI;
     public GameObject fruitImage;
     public int offSet = 10;
+    public int customerRange = 10;
     public Color color;
+
+
+    private bool stopped = false;
+    private CustomerManager manager;
     // Start is called before the first frame update
     void Start()
     {
-
+        manager = GameObject.FindGameObjectWithTag("CustomerManager").GetComponent<CustomerManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!stopped)
+        {
+            if (Camera.main.WorldToScreenPoint(transform.position).x < manager.areaSize.x - customerRange && Camera.main.WorldToScreenPoint(transform.position).x > 0 + customerRange)
+            {
+                if (Camera.main.WorldToScreenPoint(transform.position).y < manager.areaSize.y - customerRange && Camera.main.WorldToScreenPoint(transform.position).y > 0 + customerRange)
+                {
+                    transform.parent.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+                    SetIngredients(0, 0);
+                    stopped = true;
+                }
+            }
+        }
         
     }
 
     public void SetIngredients(int sideX, int sideY)
     {
+        if(transform.position.x < manager.transform.position.x)
+        {
+            sideX = 1;
+        }
+        else
+        {
+            sideX = -1;
+        }
+        if (transform.position.y < manager.transform.position.y)
+        {
+            sideY = 1;
+        }
+        else
+        {
+            sideY = -1;
+        }
         fruitUI = Instantiate(fruitUI, GameObject.FindGameObjectWithTag("Canvas").transform);
         fruitUI.transform.position = Camera.main.WorldToScreenPoint(transform.position);
-        fruitUI.transform.position = new Vector3(fruitUI.transform.position.x + sideX*40, fruitUI.transform.position.y + sideY*40, 0);
+        fruitUI.transform.position = new Vector3(fruitUI.transform.position.x + sideX*80, fruitUI.transform.position.y + sideY*50, 0);
         int howMany = Random.Range(1, 4);
         Color color1 = new Color();
         for(int i = 0; i < howMany; i++)

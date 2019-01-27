@@ -20,7 +20,7 @@ public class CustomerManager : MonoBehaviour
     {
         areaSize = new Vector2(Camera.main.pixelWidth, Camera.main.pixelHeight);
         Debug.Log("Resolution " + areaSize);
-        distanceFromEdge = 50;
+        distanceFromEdge = -50;
         SpawnCustomer();
     }
 
@@ -30,8 +30,9 @@ public class CustomerManager : MonoBehaviour
         
     }
 
-    Vector3 RandomSpawnPos()
+    public Vector3 RandomSpawnPos(bool customer)
     {
+        /*
         int where = Random.Range(0, 2);
         Debug.Log("Where " + where);
         int x, y;
@@ -65,11 +66,23 @@ public class CustomerManager : MonoBehaviour
         }
         Debug.Log("X " + x + " Y " + y);
         return Camera.main.ScreenToWorldPoint(new Vector3(x,y,0));
+        */
+        float y = Random.Range(0 - distanceFromEdge, (int)areaSize.y + distanceFromEdge);
+        float x;
+        if (customer == true)
+        {
+            x = 0 + distanceFromEdge;
+        }
+        else
+        {
+            x = (int)areaSize.x - distanceFromEdge;
+        }
+        return Camera.main.ScreenToWorldPoint(new Vector3(x, y, 0));
     }
 
     public void SpawnCustomer()
     {
-        Vector2 spawnPos = RandomSpawnPos();
+        Vector2 spawnPos = RandomSpawnPos(true);
         Debug.Log("SSPAWNWN "+spawnPos);
         GameObject customer = Instantiate(customerPrefab, spawnPos, Quaternion.identity);
         int x = 0;
@@ -90,7 +103,20 @@ public class CustomerManager : MonoBehaviour
         {
             y = -1;
         }
-        customer.GetComponentInChildren<CustomerLogic>().SetIngredients(x,y);
+        //customer.GetComponentInChildren<CustomerLogic>().SetIngredients(x,y);
+        Vector2 dir = transform.position - customer.transform.position;
+        customer.transform.position = new Vector3(customer.transform.position.x, customer.transform.position.y, 0);
+        /*
+        if (dir.x < dir.y)
+        {
+            dir = new Vector2(0, dir.y);
+        }
+        else
+        {
+            dir = new Vector2(dir.x, 0);
 
+        }
+        */
+        customer.GetComponent<Rigidbody2D>().AddForce(dir.normalized * 80f);
     }
 }
