@@ -1,0 +1,459 @@
+fileFormatVersion: 2
+guid: 0e43de7b6b6fb8c4382ec81bb2b67b6a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: backpawL
+    21300002: frontpawL
+    21300004: backlegL
+    21300006: frontlegL
+    21300008: backlegR
+    21300010: frontlegR
+    21300012: backpawR
+    21300014: frontpawR
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: backpawL
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 191
+        width: 28
+        height: 38
+      alignment: 9
+      pivot: {x: 0.34480113, y: 0.08762159}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc588378ede791489ac51d18cfe5192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frontpawL
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 188
+        width: 28
+        height: 38
+      alignment: 9
+      pivot: {x: 0.32092994, y: 0.09842401}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f071647bc789c4d82b8f78e476dc93
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backlegL
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 149
+        width: 30
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5072667, y: 0.06400299}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d586ac33338fef84fa20c7f95cfc93bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frontlegL
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 145
+        width: 30
+        height: 42
+      alignment: 9
+      pivot: {x: 0.49273378, y: 0.089955285}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 569314240345f5c4798437ab280043c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backlegR
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 45
+        width: 29
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5075173, y: 0.9359974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 043a5a08f14dc934d84a56ef61ce3fa3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frontlegR
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 42
+        width: 29
+        height: 41
+      alignment: 9
+      pivot: {x: 0.4774491, y: 0.93068045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a36347ef6a9a8041835703d172fb5fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backpawR
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2
+        width: 27
+        height: 38
+      alignment: 9
+      pivot: {x: 0.36274165, y: 0.9359975}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0e513efdeb96c438cb5536b776d4d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frontpawR
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 0
+        width: 27
+        height: 38
+      alignment: 9
+      pivot: {x: 0.3385202, y: 0.97041833}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8303a1510952343b91fea6b1d6b7c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape:
+    - - {x: 79, y: -98.5}
+      - {x: 78, y: -95.5}
+      - {x: 75, y: -92.5}
+      - {x: 73, y: -91.5}
+      - {x: 73, y: -83.5}
+      - {x: 71, y: -78.5}
+      - {x: 68, y: -77.5}
+      - {x: 65, y: -75.5}
+      - {x: 59, y: -75.5}
+      - {x: 52, y: -80.5}
+      - {x: 51, y: -83.5}
+      - {x: 51, y: -93.5}
+      - {x: 52, y: -94.5}
+      - {x: 52, y: -101.5}
+      - {x: 53, y: -102.5}
+      - {x: 53, y: -105.5}
+      - {x: 55, y: -110.5}
+      - {x: 59, y: -113.5}
+      - {x: 62, y: -114.5}
+      - {x: 72, y: -114.5}
+      - {x: 75, y: -113.5}
+      - {x: 79, y: -108.5}
+    - - {x: -48, y: -93.5}
+      - {x: -51, y: -90.5}
+      - {x: -53, y: -89.5}
+      - {x: -53, y: -81.5}
+      - {x: -55, y: -76.5}
+      - {x: -58, y: -75.5}
+      - {x: -61, y: -73.5}
+      - {x: -67, y: -73.5}
+      - {x: -74, y: -78.5}
+      - {x: -75, y: -81.5}
+      - {x: -75, y: -91.5}
+      - {x: -74, y: -92.5}
+      - {x: -74, y: -99.5}
+      - {x: -73, y: -100.5}
+      - {x: -73, y: -103.5}
+      - {x: -71, y: -108.5}
+      - {x: -67, y: -111.5}
+      - {x: -64, y: -112.5}
+      - {x: -54, y: -112.5}
+      - {x: -51, y: -111.5}
+      - {x: -47, y: -106.5}
+      - {x: -46, y: -98.5}
+    - - {x: 75, y: -48.5}
+      - {x: 76, y: -47.5}
+      - {x: 76, y: -43.5}
+      - {x: 74, y: -38.5}
+      - {x: 70, y: -35.5}
+      - {x: 69, y: -35.5}
+      - {x: 67, y: -33.5}
+      - {x: 64, y: -33.5}
+      - {x: 60, y: -31.5}
+      - {x: 57, y: -31.5}
+      - {x: 54, y: -32.5}
+      - {x: 49, y: -36.5}
+      - {x: 49, y: -37.5}
+      - {x: 47, y: -39.5}
+      - {x: 47, y: -43.5}
+      - {x: 46, y: -44.5}
+      - {x: 46, y: -50.5}
+      - {x: 49, y: -57.5}
+      - {x: 54, y: -61.5}
+      - {x: 55, y: -61.5}
+      - {x: 58, y: -64.5}
+      - {x: 60, y: -64.5}
+      - {x: 61, y: -65.5}
+      - {x: 68, y: -64.5}
+      - {x: 74, y: -58.5}
+      - {x: 74, y: -56.5}
+      - {x: 75, y: -55.5}
+    - - {x: -48, y: -45.5}
+      - {x: -48, y: -41.5}
+      - {x: -49, y: -40.5}
+      - {x: -49, y: -37.5}
+      - {x: -51, y: -35.5}
+      - {x: -52, y: -35.5}
+      - {x: -54, y: -32.5}
+      - {x: -57, y: -31.5}
+      - {x: -64, y: -31.5}
+      - {x: -65, y: -30.5}
+      - {x: -70, y: -30.5}
+      - {x: -75, y: -33.5}
+      - {x: -77, y: -38.5}
+      - {x: -77, y: -41.5}
+      - {x: -78, y: -42.5}
+      - {x: -78, y: -48.5}
+      - {x: -75, y: -55.5}
+      - {x: -70, y: -59.5}
+      - {x: -69, y: -59.5}
+      - {x: -66, y: -62.5}
+      - {x: -64, y: -62.5}
+      - {x: -63, y: -63.5}
+      - {x: -56, y: -62.5}
+      - {x: -50, y: -56.5}
+      - {x: -49, y: -53.5}
+      - {x: -49, y: -46.5}
+    - - {x: 72, y: 42.5}
+      - {x: 72, y: 50.5}
+      - {x: 70, y: 54.5}
+      - {x: 70, y: 57.5}
+      - {x: 65, y: 62.5}
+      - {x: 62, y: 64.5}
+      - {x: 54, y: 65.5}
+      - {x: 53, y: 64.5}
+      - {x: 50, y: 64.5}
+      - {x: 44, y: 58.5}
+      - {x: 44, y: 56.5}
+      - {x: 43, y: 55.5}
+      - {x: 43, y: 48.5}
+      - {x: 42, y: 47.5}
+      - {x: 42, y: 43.5}
+      - {x: 43, y: 42.5}
+      - {x: 44, y: 36.5}
+      - {x: 46, y: 33.5}
+      - {x: 51, y: 31.5}
+      - {x: 65, y: 31.5}
+      - {x: 70, y: 35.5}
+      - {x: 71, y: 38.5}
+      - {x: 71, y: 41.5}
+    - - {x: -50, y: 53.5}
+      - {x: -50, y: 57.5}
+      - {x: -51, y: 60.5}
+      - {x: -55, y: 66.5}
+      - {x: -66, y: 68.5}
+      - {x: -67, y: 67.5}
+      - {x: -71, y: 67.5}
+      - {x: -77, y: 61.5}
+      - {x: -77, y: 59.5}
+      - {x: -78, y: 58.5}
+      - {x: -78, y: 51.5}
+      - {x: -79, y: 50.5}
+      - {x: -79, y: 44.5}
+      - {x: -78, y: 43.5}
+      - {x: -78, y: 41.5}
+      - {x: -72, y: 35.5}
+      - {x: -70, y: 35.5}
+      - {x: -69, y: 34.5}
+      - {x: -58, y: 34.5}
+      - {x: -50, y: 38.5}
+      - {x: -49, y: 41.5}
+      - {x: -49, y: 52.5}
+    - - {x: 67, y: 80.5}
+      - {x: 67, y: 89.5}
+      - {x: 71, y: 90.5}
+      - {x: 73, y: 92.5}
+      - {x: 75, y: 97.5}
+      - {x: 75, y: 101.5}
+      - {x: 74, y: 102.5}
+      - {x: 74, y: 105.5}
+      - {x: 70, y: 110.5}
+      - {x: 67, y: 111.5}
+      - {x: 63, y: 111.5}
+      - {x: 62, y: 112.5}
+      - {x: 55, y: 112.5}
+      - {x: 48, y: 106.5}
+      - {x: 47, y: 103.5}
+      - {x: 46, y: 93.5}
+      - {x: 45, y: 92.5}
+      - {x: 45, y: 81.5}
+      - {x: 46, y: 78.5}
+      - {x: 50, y: 75.5}
+      - {x: 51, y: 75.5}
+      - {x: 55, y: 72.5}
+      - {x: 59, y: 72.5}
+      - {x: 62, y: 74.5}
+      - {x: 66, y: 76.5}
+      - {x: 66, y: 79.5}
+    - - {x: -54, y: 83.5}
+      - {x: -54, y: 92.5}
+      - {x: -50, y: 93.5}
+      - {x: -48, y: 95.5}
+      - {x: -46, y: 100.5}
+      - {x: -46, y: 104.5}
+      - {x: -47, y: 105.5}
+      - {x: -47, y: 108.5}
+      - {x: -51, y: 113.5}
+      - {x: -54, y: 114.5}
+      - {x: -67, y: 114.5}
+      - {x: -73, y: 109.5}
+      - {x: -74, y: 106.5}
+      - {x: -75, y: 96.5}
+      - {x: -76, y: 95.5}
+      - {x: -76, y: 84.5}
+      - {x: -75, y: 81.5}
+      - {x: -71, y: 78.5}
+      - {x: -70, y: 78.5}
+      - {x: -66, y: 75.5}
+      - {x: -62, y: 75.5}
+      - {x: -59, y: 77.5}
+      - {x: -55, y: 79.5}
+      - {x: -55, y: 82.5}
+    bones: []
+    spriteID: 7275ad46f190ce843a803ec5f28ce946
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
