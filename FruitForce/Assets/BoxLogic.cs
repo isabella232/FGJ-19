@@ -23,12 +23,13 @@ public class BoxLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if(Input.GetMouseButtonDown(0))
         {
             Debug.Log("WOOOUT");
             Open();
             
-        }
+        }*/
     }
 
     public void Open()

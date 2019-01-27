@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
         if (Mathf.Sqrt(hInput2 * hInput2 + vInput2 * vInput2) >= 0.3f)
         {
             transform.localEulerAngles = new Vector3(0.0f, 0.0f, Mathf.Atan2(vInput2, hInput2) * 180 / Mathf.PI - 90);
+            GetComponent<Rigidbody2D>().angularVelocity = 0f ;
         }
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
@@ -54,6 +55,10 @@ public class PlayerController : MonoBehaviour
                     {
                         results[i].transform.GetChild(0).GetComponent<BlenderLogic>().Blend();
                     }
+                    if (results[i].transform.GetChild(0).tag == "Box")
+                    {
+                        results[i].transform.GetChild(0).GetComponent<BoxLogic>().Open();
+                    }
                 }
             }
         }
@@ -65,7 +70,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown(playerController + "button_R1"))
         {
-            if (!haveGrabbed)
+            if (transform.GetChild(0).childCount == 0)
             {
                 CircleCollider2D[] results = new CircleCollider2D[3];
                 int num = transform.GetChild(0).GetComponent<CircleCollider2D>().OverlapCollider(new ContactFilter2D(), results);
@@ -77,11 +82,13 @@ public class PlayerController : MonoBehaviour
                     results[i].transform.localPosition = Vector3.zero;
                     results[i].GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                     results[i].GetComponent<Rigidbody2D>().isKinematic = true;
+                    results[i].GetComponent<Collider2D>().enabled = false;
                     haveGrabbed = true;
+                    break;
                 }
 
             }
-            else if (haveGrabbed)
+            else
             {
                 
                 Transform trans = transform.GetChild(0).GetChild(0);
@@ -90,6 +97,7 @@ public class PlayerController : MonoBehaviour
                 Debug.Log(angle);
                 Vector2 velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
                 trans.GetComponent<Rigidbody2D>().isKinematic = false;
+                trans.GetComponent<Collider2D>().enabled = true;
                 trans.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity + velocity*5;
 
                 
