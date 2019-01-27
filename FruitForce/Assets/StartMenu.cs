@@ -19,10 +19,12 @@ public class StartMenu : MonoBehaviour
 
         for (int i = 1; i < 5; i++)
         {
-            Input.GetButtonDown("c" + i + "_button_x");
-            _state_controller.SetTrigger("Game");
-            controller = i;
-            break;
+            if (Input.GetButtonDown("c" + i + "_button_x"))
+            {
+                _state_controller.SetTrigger("Game");
+                controller = i;
+                break;
+            }
         }
     }
 }
