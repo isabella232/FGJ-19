@@ -8,7 +8,6 @@ public enum Fruit
     Orange,
     Red,
     Green,
-    Blue,
     Yellow,
     Purple
 

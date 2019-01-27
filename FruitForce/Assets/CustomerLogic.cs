@@ -102,7 +102,7 @@ public class CustomerLogic : MonoBehaviour
         }
         GameObject obj = Instantiate(fruitImage, fruitUI.transform);
         obj.transform.localPosition = new Vector3(0, 0, 0);
-        obj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Juice".ToString());
+        obj.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/juice");
         obj.GetComponent<Image>().color = color1;
         color = color1;
     }
