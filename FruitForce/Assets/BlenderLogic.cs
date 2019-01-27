@@ -61,14 +61,14 @@ public class BlenderLogic : MonoBehaviour
 
         }
 
-        transform.parent.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Blender0");
+        transform.parent.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Blender1");
         blending = false;
     }
 
     public void Blend()
     {
         blending = true;
-        transform.parent.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Blender1");
+        transform.parent.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Blender0");
 
     }
 
@@ -78,7 +78,7 @@ public class BlenderLogic : MonoBehaviour
         {
             
             collision.gameObject.transform.parent.gameObject.SetActive(false);
-            transform.parent.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Blender1");
+            transform.parent.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Blender0");
             fruitsInside.Add(collision.gameObject);
         }
     }

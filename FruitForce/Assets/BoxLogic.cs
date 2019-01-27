@@ -9,14 +9,14 @@ public class BoxLogic : MonoBehaviour
     public float minForce = 20f;
     public List<Fruit> fruits;
     private int boxPrice;
-    private int pricePerFruit = 10;
+    private int pricePerFruit = 20;
     // Start is called before the first frame update
     void Start()
     {
         
         fruits = new List<Fruit>();
         int amount = Random.Range(2, maxAmount);
-        boxPrice = pricePerFruit * amount + (int)(GameObject.FindGameObjectWithTag("CustomerManager").GetComponent<CustomerManager>().customersServed*0.25f);
+        boxPrice = pricePerFruit * amount + (int)(GameObject.FindGameObjectWithTag("CustomerManager").GetComponent<CustomerManager>().customersServed*0.4f);
         for(int i = 0; i < amount; i++)
         {
             int whichFruit = Random.Range(0, System.Enum.GetValues(typeof(Fruit)).Length);
