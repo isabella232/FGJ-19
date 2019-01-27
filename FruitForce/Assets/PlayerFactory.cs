@@ -29,6 +29,8 @@ public class PlayerFactory : MonoBehaviour
                         GameObject newPlayer = Instantiate(player);
                         newPlayer.GetComponent<PlayerController>().playerController = "c" + i + "_";
                         newPlayer.GetComponent<PlayerController>().playerNum = numPlayer;
+
+                        newPlayer.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Doggy" + numPlayer);
                     }
             }
         }

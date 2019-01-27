@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public float maxVelocity = 4.0f;
     bool haveGrabbed = false;
     float throwing = 0f;
+    public float maxThrow = 3f;
+    public float throwVelocityMult = 3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,7 @@ public class PlayerController : MonoBehaviour
         //Debug.Log(Input.GetButton(playerController + "button_x") + " " + Input.GetButton(playerController + "button_o"));
         if (Mathf.Sqrt(hInput2 * hInput2 + vInput2 * vInput2) >= 0.3f)
         {
-            transform.localEulerAngles = new Vector3(0.0f, 0.0f, Mathf.Atan2(vInput2, hInput2) * 180 / Mathf.PI - 90);
+            transform.localEulerAngles = new Vector3(0.0f, 0.0f, Mathf.Atan2(vInput2, hInput2) * 180 / Mathf.PI);
             GetComponent<Rigidbody2D>().angularVelocity = 0f ;
         }
 
@@ -90,21 +92,33 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                
+                throwing += 0.001f;
+            }
+            
+            
+        }
+
+        if (throwing != 0)
+        {
+            throwing += Time.deltaTime;
+            if (throwing >= maxThrow) throwing = maxThrow;
+
+            transform.GetChild(0).GetChild(0).position = transform.GetChild(0).TransformPoint(new Vector3( (Random.value-0.5f) / 4f * throwing, (Random.value - 0.5f) / 4f * throwing, 0));
+
+            if (Input.GetButtonUp(playerController + "button_R1"))
+            {
                 Transform trans = transform.GetChild(0).GetChild(0);
                 trans.parent = null;
-                float angle = (transform.eulerAngles.z+90)/180*Mathf.PI;
+                float angle = (transform.eulerAngles.z) / 180 * Mathf.PI;
                 Debug.Log(angle);
                 Vector2 velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
                 trans.GetComponent<Rigidbody2D>().isKinematic = false;
                 trans.GetComponent<Collider2D>().enabled = true;
-                trans.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity + velocity*5;
-
-                
-                haveGrabbed = false;
+                trans.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity + velocity * throwVelocityMult * 3f;
+                throwing = 0;
             }
-            
         }
+        
 
     }
 }
